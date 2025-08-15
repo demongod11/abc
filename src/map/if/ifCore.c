@@ -194,6 +194,8 @@ int If_ManPerformMappingComb( If_Man_t * p )
 */
     p->pPars->FinalDelay = p->RequiredGlo;
     p->pPars->FinalArea  = p->AreaGlo;
+    // report total number of cuts considered during mapping when verbose is enabled
+    Abc_Print( 1, "Total K-feasible cuts considered = %d\n", p->nCutsTotal );
     return 1;
 }
 
